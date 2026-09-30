@@ -541,7 +541,7 @@ function LiveSync() {
 const pulse = useQuery({
   queryKey: ["business-pulse"],
   queryFn: async () => {
-  const token = await window.Clerk.session.getToken();
+  const token = await (window as any).Clerk?.session?.getToken();
 
   console.log("🔥 NEW PULSE CODE:", Boolean(token), token?.length);
 
