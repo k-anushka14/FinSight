@@ -95,6 +95,9 @@ export function RevenueExpenseChart({
             stroke="#10B981"
             strokeWidth={2.5}
             fill="url(#revGrad)"
+            isAnimationActive
+            animationDuration={850}
+            animationEasing="ease-out"
             activeDot={{ r: 5, fill: "#10B981", stroke: "#080B12", strokeWidth: 2 }}
           />
           <Area
@@ -104,6 +107,9 @@ export function RevenueExpenseChart({
             stroke="#F59E0B"
             strokeWidth={2}
             fill="url(#expGrad)"
+            isAnimationActive
+            animationDuration={950}
+            animationEasing="ease-out"
             activeDot={{ r: 4, fill: "#F59E0B", stroke: "#080B12", strokeWidth: 2 }}
           />
         </AreaChart>

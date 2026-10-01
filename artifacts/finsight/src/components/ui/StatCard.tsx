@@ -70,7 +70,7 @@ export function StatCard({
   return (
     <div
       onClick={onClick}
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#111722]/90 p-5 shadow-lg backdrop-blur-md transition-all duration-200 hover:-translate-y-1 ${currentTone.glow} ${
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#111722]/90 p-5 shadow-lg backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl ${currentTone.glow} ${
         onClick ? "cursor-pointer" : ""
       } ${className}`}
     >
@@ -90,7 +90,7 @@ export function StatCard({
         </div>
 
         <div
-          className={`grid size-11 place-items-center rounded-xl border transition-transform duration-200 group-hover:scale-105 ${currentTone.iconBg}`}
+          className={`grid size-11 place-items-center rounded-xl border transition-all duration-300 ease-out group-hover:scale-105 group-hover:rotate-3 ${currentTone.iconBg}`}
         >
           <Icon size={20} strokeWidth={2.2} />
         </div>
