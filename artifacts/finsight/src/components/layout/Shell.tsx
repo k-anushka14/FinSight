@@ -200,7 +200,7 @@ export function Shell({
                         key={item.href}
                         href={item.href}
                         onClick={() => setMobileNav(false)}
-                        className={`group relative flex items-center gap-3 rounded-xl px-3 py-2 text-[13px] font-medium transition-all duration-150 ${
+                        className={`group relative flex items-center gap-3 rounded-xl px-3 py-2 text-[13px] font-medium transition-all duration-300 ease-out ${
                           active
                             ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 shadow-sm shadow-emerald-500/5 font-semibold"
                             : "text-zinc-400 hover:bg-white/[0.04] hover:text-zinc-100 hover:translate-x-0.5"

@@ -63,6 +63,7 @@ export function DashboardPage({ data, onRefresh }: DashboardPageProps) {
 
   return (
     <div className="space-y-8 animate-rise">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.08),transparent_68%)]" />
       {/* PAGE HEADER */}
       <PageHeader
         kicker={`${data.business.name} · ${data.business.location}`}
@@ -112,7 +113,7 @@ export function DashboardPage({ data, onRefresh }: DashboardPageProps) {
       />
 
       {/* 5 KPI METRICS */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <div className="dashboard-stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         <StatCard
           label="Total Revenue"
           value={compact(f.revenue)}
@@ -193,7 +194,9 @@ export function DashboardPage({ data, onRefresh }: DashboardPageProps) {
           </div>
 
           {f.monthly.length ? (
-            <RevenueExpenseChart data={f.monthly} height={280} />
+            <div className="chart-reveal">
+              <RevenueExpenseChart data={f.monthly} height={280} />
+            </div>
           ) : (
             <EmptyState
               title="No Monthly Velocity Yet"
